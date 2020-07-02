@@ -1,0 +1,854 @@
+/* @override 
+	http://uwdesign2018.local/resources/uw2018/css/base.css */
+
+@font-face{
+    font-family: "Sentinel";
+    src: url('/resources/uw2018/fonts/Sentinel-Book.ttf');
+    font-weight: 300;
+}
+
+body {
+	font-family: "Usual", sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+	color: #222;
+}
+
+.container-max-width {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1200px;
+}
+
+/* @group Page Header */
+
+.site-header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 55px;
+	z-index: 1000;
+	background-color: #222;
+	color: white;
+}
+
+@media (max-width: 600px) {
+	.site-header {
+	 height: 110px;
+  }
+}
+
+@media (max-width: 413px) {
+	.site-header {
+	 height: 165px;
+  }
+}
+
+
+.page-home .site-header {
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+}
+
+.site-header.sticky {
+	opacity: 1;
+}
+
+.site {
+	padding-top: 75px;
+}
+
+.site-header::after {
+	/* Clearfix */
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.site-branding {
+	float: right;
+}
+
+.site-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+.site-title a {
+	display: inline-block;
+	padding: 15px;
+	color: inherit;
+}
+
+.main-navigation .nav-menu {
+	display: inline-block;
+	margin-bottom: 0;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+.menu {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.menu-item {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.menu-link {
+	display: inline-block;
+	padding: 15px 22.5px;
+	font-weight: 500;
+}
+
+#primary-menu > li > a {
+	color: #888;
+}
+
+#primary-menu > li > a.active {
+	color: #fff;
+}
+
+#primary-menu > li > a:hover {
+	color: #222;
+}
+
+.site-title a {
+	font-weight: 500;
+}
+
+.menu-link,
+.menu-link:focus,
+.menu-link:active {
+	color: #fff;
+}
+
+.menu-link:hover, .site-title a:hover {
+	color: #222;
+  text-decoration: none;
+  animation: 3s multicolor infinite;
+  -webkit-animation: 3s multicolor infinite;
+}
+
+@keyframes multicolor {
+  0%, 16%, 100% {
+        background-color: #00adef;
+  }
+  33%, 50% {
+        background-color: #fff100;
+  }
+  66%, 83% {
+        background-color: #ec008b;
+  }
+}
+@-webkit-keyframes multicolor {
+  0%, 16%, 100% {
+        background-color: #00adef;
+  }
+  33%, 50% {
+        background-color: #fff100;
+  }
+  66%, 83% {
+        background-color: #ec008b;
+  }
+}
+
+.submenu-container {
+	position: absolute;
+	right: 0;
+	left: 0;
+	display: none;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-top: 1px solid white;
+	background-color: #222;
+}
+
+.has-submenu:hover .submenu-container {
+	display: block;
+}
+
+.submenu-group {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
+
+.submenu-group-tags .submenu-item {
+	display: inline-block;
+	width: 100%;
+}
+
+.submenu-item a {
+	color: #fff;
+	font-weight: 500;
+	font-size: 15px;
+}
+
+.submenu-item-program-industrial a {
+	color: #00adef;
+}
+
+.submenu-item-program-interaction a {
+	color: #fff100;
+}
+
+.submenu-item-program-visual-communication a {
+	color: #ec008b;
+}
+
+.submenu-title {
+	font-weight: 500;
+	font-size: 17px;
+}
+
+.submenu-group.submenu-group-tags .submenu {
+  column-count: 4;
+	
+}
+
+.submenu-group.submenu-group-tags a {
+	font-family: "Sentinel";
+	font-weight: 300;
+}
+
+@media (min-width: 768px) {
+	.submenu-group-programs {
+		width: 20%;
+	}
+	
+	.submenu-group-tags {
+		width: 60%;
+	}
+	
+	.submenu-group-tags .submenu-item {
+		display: inline-block;
+	}
+}
+
+.submenu {
+	list-style-type: none;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.submenu-link:hover,
+.submenu-link:focus,
+.submenu-link:active {
+	color: white;
+}
+
+.site-chooser,
+.site-chooser-menu {
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.site-chooser-current {
+	position: relative;
+}
+
+.site-chooser-menu {
+	position: absolute;
+	right: 0;
+	display: none;
+	background-color: #000;
+}
+
+.site-chooser-current:hover .site-chooser-menu {
+	display: block;
+}
+
+a.site-chooser-link {
+	display: block;
+	padding: 10px 20px;
+	color: #fff;
+}
+
+/* @end Page Header */
+
+/* @group Splash */
+
+.page-section-splash,
+.page-section-splash-2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.page-section-splash .section-header,
+.page-section-splash-2 .section-header {
+	display: none;
+}
+
+/* @end Splash */
+
+/* @group Home Page */
+
+.section-title {
+	font-weight: 800;
+	font-size: 30px;
+	display: inline-block;
+}
+
+.title-star {
+    margin-left: 15px;
+    margin-top: 3px;
+    width: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.section-anchor {
+	position: relative;
+	top: -75px;
+}
+
+.page-section {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#page-section-info header {
+    display: none;
+}
+
+.info-bachelor, .info-master {
+	margin-top: 80px;
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+
+.info-bachelor h3, .info-master h3 {
+	font-weight: 800;
+	font-size: 20px;
+	margin-bottom: 15px;
+	clear: both;
+}
+
+.info-master {
+	margin-top: 100px; 
+}
+
+.info-bachelor strong, .info-master strong {
+	font-family: "Usual", sans-serif;
+	font-weight: 500;
+	font-size: 17px;
+}
+
+.info-bachelor p, .info-master p {
+	font-family: "Sentinel";
+	font-weight: 300;
+	font-size: 17px;
+}
+
+.floatInfo {
+	float: left;
+}
+
+.floatInfo.left {
+  width: 25%;
+}
+
+.floatInfo.right {
+  width: 75%;
+}
+
+@media screen and (max-width: 900px) {
+    .floatInfo.left {
+        width: 100%;
+    }
+	    .floatInfo.right {
+        width: 100%;
+    }
+}
+
+#page-section-designers .section-header h2 {
+    display: none;
+}
+
+.students-section {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.section-header {
+  margin-top: 100px;
+	margin-bottom: 45px;
+}
+
+.students-section .section-header {
+	margin-bottom: 45px;
+}
+
+.program-title {
+	margin-bottom: 40px;
+}
+
+#page-section-designers .grid-item h2 {
+  text-align: center;
+	font-weight: 800;
+	font-size: 15px;
+}
+
+#page-section-designers .grid-item h2 a {
+  text-decoration: none;
+}
+
+.grid {
+	margin-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.grid-masonry-columns {
+	column-count: 1;
+	column-fill: balance;
+	column-gap: 0;
+}
+
+.grid-item {
+	display: inline-block;
+	padding-bottom: 40px;
+	width: 100%;
+	vertical-align: top;
+}
+
+.grid-masonry-columns .grid-item {
+	display: block;
+	break-inside: avoid-column;
+}
+
+@media (min-width: 576px) {
+	.grid-masonry-columns {
+		column-count: 2;
+		column-gap: 20px;
+	}
+
+	.grid-horizontal {
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+
+	.grid-horizontal .grid-item {
+		padding: 10px;
+		width: 50%;
+	}
+
+	.students-section .grid-horizontal .grid-item {
+		width: 100%;
+	}
+}
+
+@media (min-width: 850px) {
+	.grid-masonry-columns {
+		column-count: 3;
+		column-gap: 30px;
+	}
+	
+	.grid-horizontal {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+	.grid-horizontal .grid-item {
+		padding: 15px;
+		width: 33.333%;
+	}
+
+	.students-section .grid-horizontal .grid-item {
+		width: 50%;
+	}
+}
+
+@media (min-width: 1250px) {
+	.grid-masonry-columns {
+		column-count: 4;
+		column-gap: 40px;
+	}
+	
+	.grid-horizontal {
+		margin-right: -20px;
+		margin-left: -20px;
+	}
+
+	.grid-horizontal .grid-item {
+		padding: 20px;
+		width: 25%;
+	}
+
+	.students-section .grid-horizontal .grid-item {
+		width: 33.33%;
+	}
+}
+
+.entry-thumbnail {
+	width: 265px;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.entry-thumbnail:hover {
+	text-decoration: none;
+}
+
+.entry-program-industrial.entry-thumbnail:hover img {
+  box-shadow: -14px 14px #00adef;
+/*	-webkit-transform: translateX(14px);
+	transform: translateX(14px);
+		-webkit-transform: translateY(-14px);
+	transform: translateY(-14px);*/
+		-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.entry-program-interaction.entry-thumbnail:hover img {
+  box-shadow: -14px 14px #fff100;
+/*	-webkit-transform: translateX(14px);
+	transform: translateX(14px);
+		-webkit-transform: translateY(-14px);
+	transform: translateY(-14px);*/
+		-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.entry-program-visual-communication.entry-thumbnail:hover img {
+	box-shadow: -14px 14px #ec008b;
+/*	-webkit-transform: translateX(14px);
+	transform: translateX(14px);
+	-webkit-transform: translateY(-14px);
+	transform: translateY(-14px);*/
+		-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.entry-program-masters.entry-thumbnail:hover img {
+	box-shadow: -14px 14px #000;
+/*	-webkit-transform: translateX(14px);
+	transform: translateX(14px);
+	-webkit-transform: translateY(-14px);
+	transform: translateY(-14px);*/	
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.entry-program-industrial.entry-program-interaction.entry-thumbnail:hover img {
+  box-shadow: -80px 80px 0 -66px #00adef, -28px 0 0 -14px #00adef, -14px 14px #fff100;
+/*	-webkit-transform: translateX(14px);
+	transform: translateX(14px);
+	-webkit-transform: translateY(-14px);
+	transform: translateY(-14px);*/
+		-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.entry-program-industrial.entry-program-visual-communication.entry-thumbnail:hover img {
+  box-shadow: -80px 80px 0 -66px #00adef, -28px 0 0 -14px #00adef, -14px 14px  #ec008b;
+/*	-webkit-transform: translateX(14px);
+	transform: translateX(14px);
+	-webkit-transform: translateY(-14px);
+	transform: translateY(-14px);*/
+		-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.entry-program-interaction.entry-program-visual-communication.entry-thumbnail:hover img {
+  box-shadow: -80px 80px 0 -66px #fff100, -28px 0 0 -14px #fff100, -14px 14px #ec008b;
+/*	-webkit-transform: translateX(14px);
+	transform: translateX(14px);
+	-webkit-transform: translateY(-14px);
+	transform: translateY(-14px);*/
+		-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.entry-program-industrial.entry-program-interaction.entry-program-visual-communication.entry-thumbnail:hover img {
+  box-shadow: -102px 102px 0 -88px #00adef, -17px 94px 0 -80px #fff100, -28px 0 0 -14px #00adef, -58px 58px 0 -44px #00adef, -14px 14px #ec008b;
+/*	-webkit-transform: translateX(14px);
+	transform: translateX(14px);
+	-webkit-transform: translateY(-14px);
+	transform: translateY(-14px);*/
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.img-fluid {
+	min-width: 100%;
+}
+
+.page-home .entry-title, .page-single-category .entry-title {
+	font-size: 17px;
+	margin-bottom: 3px; 
+	margin-top: 10px;
+	line-height: 23px;
+}
+
+.entry-thumbnail.entry-video {
+	width: 370px;
+}
+
+.page-home .entry-meta, .page-single-category .entry-meta {
+	line-height: 1.2;
+}
+
+.author {
+	font-family: "Sentinel";
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.author:not(:last-child)::after {
+	content: ',';
+}
+
+/* @end Home Page */
+
+/* @group Credits */
+
+.page-section-credits {
+	margin-bottom: 0;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #fff;
+	background-color: #222;
+}
+
+.page-section.page-section-credits.section-type-credits .section-content {
+	width: 85%;
+}
+
+.credits-group {
+	margin-bottom: 0;
+}
+
+.credits-name {
+	margin-bottom: 0;
+	font-family: "Sentinel";
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.credits-title {
+	font-weight: 500;
+	font-size: 17px;
+}
+
+/* @end Credits */
+
+/* @group Single Project Page */
+
+.single-projects {
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+	.single-projects {
+		margin-right: -25px;
+		margin-left: -25px;
+	}
+
+	.single-projects::after {
+		/* Clearfix */
+		display: block;
+		clear: both;
+		content: '';
+	}
+
+	.single-projects .entry-header {
+		float: right; /*change for float what side*/
+		padding-right: 25px;
+		padding-left: 25px;
+		width: 35%;
+	}
+
+	.single-projects .entry-content {
+		float: left;
+		padding-right: 25px;
+		padding-left: 25px;
+		width: 65%;
+	}
+}
+
+.single-projects .entry-title {
+	font-size: 30px;
+	font-weight: 800;
+}
+
+.single-projects .author {
+	font-size: 15px;
+	line-height: 0;
+}
+
+.entry-meta h4{
+	font-family: "Usual", sans-serif;
+	font-size: 17px;
+	margin-top: 30px;
+}
+
+.entry-meta .byline.floatInfo.right {
+	width: 50%;
+}
+
+.entry-meta .entry-tags.floatInfo.left {
+	width: 50%;
+}
+
+.single-projects .tag {
+	font-family: "Sentinel";
+	font-size: 15px;
+	line-height: 0;
+}
+
+.entry.single-projects .author:not(:last-child)::after {
+	content: '\A';
+  white-space: pre;
+}
+
+.entry.single-projects .tag:not(:last-child)::after {
+	content: '\A';
+  white-space: pre;
+}
+
+.single-projects .entry-description {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-family: "Sentinel";
+	font-size: 15px;
+}
+
+.entry-content-video {
+	margin-bottom: 10px;
+}
+
+.entry-content-image {
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* @end Single Project Page */
+
+/* @group Single Student Page */
+
+.single-students {
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+	.single-students {
+		margin-right: auto;
+		margin-left: auto;
+		width: 80%;
+	}
+
+	.single-students::after {
+		/* Clearfix */
+		display: block;
+		clear: both;
+		content: '';
+	}
+
+	.single-students .entry-header {
+		float: right; /*change to float*/
+		width: 50%;
+		padding-top: 5%;
+	}
+
+	.single-students .entry-content {
+		float: left;
+		width: 50%;
+	}
+}
+
+.single-students .entry-title {
+	font-size: 40px;
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 800;
+}
+
+.single-students .entry-thumbnail {
+    width: 85%;
+    margin-right: auto;
+}
+
+.entry-asterisk {
+	margin-left: 20px;
+	width: 43px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+.tag.student-program-industrial, .tag.student-program-interaction, .tag.student-program-visual-communication, .tag.student-program-masters {
+	font-family: "Usual", sans-serif;
+	font-weight: 800;
+	font-size: 20px;
+}
+
+.tag.student-program-industrial a {
+	color: #00adef;
+}
+
+.tag.student-program-interaction a {
+	color: #fff100;
+}
+
+.tag.student-program-visual-communication a {
+	color: #ec008b;
+}
+
+.details {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.details-list {
+	padding-right: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.details-list a {
+  font-family: "Sentinel";
+	font-size: 15px;
+}
+
+.details-section {
+	display: inline-block;
+	padding-right: 60px;
+	vertical-align: top;
+}
+
+/* @end Single Student Page */
+
+/* @group Category Page */
+
+.page-single-category .page-section {
+	padding-top: 0;
+}
+
+/* @end Category Page */
+
+/* @group 404 */
+
+.page-404 .site-main {
+	padding-top: 100px;
+}
+
+/* @end 404 */

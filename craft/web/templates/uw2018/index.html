@@ -1,0 +1,262 @@
+{#
+ # Homepage template
+ # ---------------
+ #
+ # When this template gets loaded, it will be because someone has accessed
+ # http://yoursite.com/ (without any URI). Craft checks to see if you have
+ # a Single section set to be the Homepage (as you do, by default), and
+ # loads the section’s Template (this file). A special ‘entry’ variable
+ # will already be set for you, assigned to the Homepage entry.
+ #
+ # It's worth noting that even if you didn't have a Homepage Single section,
+ # as long as this template remains at craft/templates/index.html, it
+ # would still be the one to get loaded when accessing http://yoursite.com/,
+ # albeit without an ‘entry’ variable already set for you.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://buildwithcraft.com/docs/routing
+ #}
+
+{% extends '_layout' %}
+
+{% set body_class = 'page-home' %}
+
+{% block content %}
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<div class="begin">
+			<h1 class="text" id="beginText">from us to you <img src="/resources/{{ currentSite.handle }}/logo.png"></h1>
+			<img src="/resources/{{ currentSite.handle }}/arrow.png" class="arrow" id="arrow">
+		</div>
+
+		<div class="begin vid" id="vidiv">
+			<div id="whole" class="whole">
+				<div class="row">
+					<span id="star1" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/1.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star2" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/2.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star3" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/3.png"></span>
+					<span class="dot"></span>
+					<span id="star4" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/4.png"></span>
+					<span class="dot"></span>
+				</div>
+				<div class="row">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star5" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/6.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star6" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/5.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star7" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/7.png"></span>
+				</div>
+				<div class="row">
+					<span class="dot"></span>
+					<span id="star8" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/8.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star9" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/9.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star10" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/10.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+				<div class="row">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star11" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/11.png"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot"></span>
+					<span id="star12" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/12.png"></span>
+					<span class="dot"></span>
+				</div>
+				<div class="row">
+					<span class="dot"></span>
+					<span id="star13" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/13.png"></span>
+					<span class="dot"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot star"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star14" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/14.png"></span>
+				</div>
+				<div class="row">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star15" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/15.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star16" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/16.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star17" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/17.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+				<div class="row">
+					<span id="star18" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/18.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star19" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/19.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star20" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/20.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star21" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/21.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+				<div class="row">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star22" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/22.png"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span id="star23" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/23.png"></span>
+					<span id="star24" class="dot star"><img src="resources/{{ currentSite.handle }}/splash/24.png"></span>
+					<span class="dot"></span>
+				</div>
+			</div>
+			<div class="copy"><p id="test" class="copytext">From book covers and cardboard to door codes and career fairs. From questioning abilities to pursuing passions. From those of us who think about the world around us through VR, pixels, and styrofoam. From late nights of sanding to early mornings printing. From your peers whose final exams were projects that are never complete, from your children who ask for a new external hard drive for their birthday. From all of us, this is for you.</p></div>
+		</div>
+			
+			{# Loop through the matrix blocks and load their template files #}
+			{% for block in entry.matrix.all() %}
+				{% switch block.type %}
+					{% case 'richTextSection' %}
+						{% include 'home/_section-rich-text' with { 'block': block } only %}
+						
+					{% case 'projectsSection' %}
+						{% include 'home/_section-projects' with { 'block': block } only %}
+						
+					{% case 'studentsSection' %}
+						{% include 'home/_section-students' with { 'block': block } only %}
+						
+					{% case 'creditsSection' %}
+						{% include 'home/_section-credits' with { 'block': block } only %}
+						
+				{% endswitch %}
+			{% endfor %}
+			
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+		<script>
+
+			var begin = document.getElementById("beginText");
+			var arrow = document.getElementById("arrow");
+			var vidiv = document.getElementById("vidiv");
+			var play = vidiv.offsetTop;
+			var stickyHead = begin.offsetTop;
+			var video = document.getElementById("video");
+			document.addEventListener('DOMContentLoaded', function() {
+				begin.classList.add("load");
+				arrow.classList.add("load");
+				$(".studentvideos").on("mouseover", function(event) {
+    				this.play();
+				}).on('mouseout', function(event) {
+    				this.pause();
+    				this.currentTime = 0;
+				});
+			}, false);
+			
+			window.onscroll = function() {playVid()};
+			function playVid() {
+				var temp = window.pageYOffset+300;
+				if (temp >= play) {	
+					document.getElementById("test").classList.add("load");	
+					for (var i = 1; i <= 24; i++) {
+						document.getElementById("star" + i).classList.add("load");
+					}
+				}
+/*
+				if (temp >= (stickyHead - 75)) {
+					document.getElementById("whole").classList.add("fixed");
+				} else {
+					document.getElementById("whole").classList.remove("fixed");
+				}*/
+
+				if (temp >= stickyHead) {	
+					document.getElementById("masthead").classList.add("sticky");
+				} else {
+					document.getElementById("masthead").classList.remove("sticky");
+				}
+/*
+				var starGone = document.getElementById("page-section-info").offsetTop;
+				if (temp >= starGone) {	
+					document.getElementById("whole").classList.add("gone");
+				} else {
+					document.getElementById("whole").classList.remove("gone");
+				}
+				
+				var starNone = document.getElementById("page-section-projects").offsetTop;
+
+				if (temp >= starNone) {	
+					document.getElementById("whole").classList.add("none");
+				} else {
+					document.getElementById("whole").classList.remove("none");
+				}
+
+				if (temp >= (starNone + 200)) {	
+					document.getElementById("whole").classList.add("disappear");
+				} else {
+					document.getElementById("whole").classList.remove("disappear");
+				}*/
+
+			}
+		
+		</script>
+
+{% endblock %}

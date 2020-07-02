@@ -1,0 +1,23 @@
+<article id="entry-{{ entry.id }}" class="entry entry-type-{{ entry.type.handle }}{% for program in entry.program %} entry-program-{{ program.slug }}{% endfor %} {% for tag in entry.tags %} entry-tag-{{ tag.slug }}{% endfor %} {{ entry.splash | length ? 'has-entry-thumbnail' }}">
+	
+	{# Get the thumbnail image #}
+	{% set asset = entry.splash[0] ?? null %}
+	
+	{% if asset | length %}
+	<a class="{% for program in entry.program %} entry-program-{{ program.slug }}{% endfor %} entry-thumbnail" href="{{ entry.url }}" aria-hidden="true">
+		<img src="{{ asset.getUrl({ mode: 'fit', width: '540', quality: '90' }) }}" width="{{ asset.getWidth() }}" height="{{ asset.getHeight() }}" alt="{{ asset.title }}" class="img-fluid">
+	{% endif %}
+	
+	<header class="entry-header">
+		<h2 class="entry-title">{{ entry.title }}</h2>
+		
+		<div class="entry-meta">
+			<span class="byline">
+				{% for designer in entry.designers %}
+				<span class="author">{{ designer.title }}</span>
+				{% endfor %}
+			</span>
+		</div><!-- .entry-meta -->
+	</header>
+</a>
+</article>
